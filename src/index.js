@@ -3,6 +3,11 @@ export * from "./cards/index.js";
 import express from "express";
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("✅ GitHub Readme Stats API is running!");
+});
+
+
 import topLangsRoute from "../api/top-langs.js"; 
 app.use("/api/top-langs", topLangsRoute);
 
